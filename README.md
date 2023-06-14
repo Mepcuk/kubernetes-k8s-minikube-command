@@ -1,7 +1,7 @@
 ## kubernetes-k8s-minikube-command
 
 Get pods information - runner or workers
-`kubectl get pods`
+```kubectl get pods```
 
 
 Create deployment (deploy name test-deploy) with replica set of 4. Allow to kill any pod and K8s recreate pod automatically
