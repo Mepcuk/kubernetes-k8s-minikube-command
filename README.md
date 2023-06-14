@@ -37,3 +37,13 @@ Run Deployment manifest from CLI
 Check inside pod via port-forwarding to 777 from pods 80
 `kubectl port-forward deploy-replica-pod-id 777:80`
 
+Horizontal pod autoscaler check
+`kubectl get hpa`
+
+Remove Deployment from manifest CLI
+`kubectl delete -f deployment-basic-manifest.yaml`
+
+Delete all Deployments from manifest CLI
+`kubectl delete deployment --all`
+
+
