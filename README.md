@@ -31,4 +31,9 @@ Return deploy to last 3 revision from deploy history
 If new image version is always latest to update deployment
 `kubectl rollout restart deployment/test-deploy`
 
+Run Deployment manifest from CLI
+`kubectl apply -f deployment-basic-manifest.yaml`
+
+Check inside pod via port-forwarding to 777 from pods 80
+`kubectl port-forward deploy-replica-pod-id 777:80`
 
