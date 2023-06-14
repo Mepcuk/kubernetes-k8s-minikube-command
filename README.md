@@ -14,7 +14,21 @@ Create deployment (deploy name test-deploy)  with autoscale
 `kubectl autoscale deployment test-deploy --min=2 --max=6 --cpu-percent=80`
 
 Deploy history
-`kubectl rollout history deployment/_test-deploy_`
+`kubectl rollout history deployment/test-deploy`
 
-Image update in deployment
-``
+Deploy status and check after rollout any changes how your changes apply
+`kubectl rollout status deployment/test-deploy`
+
+Image update change in runned deployment (before need to know container name `kubectl describe deployment test-deploy` and check info next row after `Containers:` )
+`kubectl set image deployment/test-deploy container-name=new-image-name:latest --record` 
+
+Return deploy to 1 back in deploy history
+`kubectl rollou undo deployment/test-deploy`
+
+Return deploy to last 3 revision from deploy history
+`kubectl rollou undo deployment/test-deploy --to-revision=4`
+
+If new image version is always latest to update deployment
+`kubectl rollout restart deployment/test-deploy`
+
+
